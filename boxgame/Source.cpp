@@ -5,6 +5,12 @@
 #include "Maps.h"
 #include "Vector2D.h"
 
+#ifdef __linux__
+	#define CLEAR std::system("clear")
+#else
+	#define CLEAR std::system("cls")
+#endif
+
 bool win = false;
 unsigned int MapNumber = 0;
 char Direction;
@@ -255,8 +261,7 @@ void init(const std::string& MapFile)
 
 void PrintMap()
 {
-	std::system("cls");
-	//std::system("clear");
+	CLEAR;
 	for (int y = 0; y < 10; y++)
 	{
 		for (int x = 0; x < 10; x++)

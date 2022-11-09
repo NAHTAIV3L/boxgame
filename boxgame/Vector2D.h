@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include <String>
+#include <string>
 
 template<class T>
 class V2D_Generic
